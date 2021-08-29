@@ -1,16 +1,19 @@
-package main
+package adapter
 
-import "fmt"
+import (
+	"fmt"
+	"lesson1/pkg/question28/handleJson"
+)
 
 /*
 Паттерн адаптер, который реализует интерфейс старого обработчика
 */
 
 type AdapterJsonToXml struct {
-	handler *NewHandlerJSON
+	handler *handleJson.NewHandlerJSON
 }
 
-func (adp *AdapterJsonToXml) uploadXML() {
-	adp.handler.uploadJSON()
+func (adp *AdapterJsonToXml) UploadXML() {
+	adp.handler.UploadJSON()
 	fmt.Println("Convert JSON to XML\nUpload XML file in service")
 }

@@ -1,4 +1,4 @@
-package main
+package handleXml
 
 import "fmt"
 
@@ -7,11 +7,11 @@ import "fmt"
 */
 
 type HandlerXML interface {
-	uploadXML()
+	UploadXML()
 }
 
 type OldHandlerXML struct{}
 
-func (xml *OldHandlerXML) uploadXML() {
+func (xml *OldHandlerXML) UploadXML() {
 	fmt.Println("Upload xml file in service")
 }

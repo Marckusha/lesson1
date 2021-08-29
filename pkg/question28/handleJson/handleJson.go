@@ -1,4 +1,4 @@
-package main
+package handleJson
 
 import "fmt"
 
@@ -7,11 +7,11 @@ import "fmt"
 */
 
 type HandlerJSON interface {
-	uploadJSON()
+	UploadJSON()
 }
 
 type NewHandlerJSON struct{}
 
-func (json *NewHandlerJSON) uploadJSON() {
+func (json *NewHandlerJSON) UploadJSON() {
 	fmt.Println("Upload json file")
 }

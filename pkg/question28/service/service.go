@@ -1,4 +1,6 @@
-package main
+package service
+
+import "lesson1/pkg/question28/handleXml"
 
 /*
 сервис, который принимает только обработчик XML файлов со старым интерфейсом
@@ -6,6 +8,6 @@ package main
 
 type Service struct{}
 
-func (s *Service) updateService(x HandlerXML) {
-	x.uploadXML()
+func (s *Service) UpdateService(x handleXml.HandlerXML) {
+	x.UploadXML()
 }
